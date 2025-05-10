@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main {
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+final double tasaDolar = 900.0; // 1 USD = 900 CLP (puedes
+actualizar esta tasa)
+System.out.println(&quot;Conversor de Moneda&quot;);
+System.out.println(&quot;1. Convertir CLP a USD&quot;);
+System.out.println(&quot;2. Convertir USD a CLP&quot;);
+System.out.print(&quot;Elige una opcion (1 o 2):&quot;);
+int opcion = scanner.nextInt();
+if (opcion == 1) {
+System.out.print(&quot;ingresa la cantidad en CLP: &quot;);
+double clp = scanner.nextDouble();
+double usd = clp / tasaDolar;
+System.out.printf(&quot;Equivalente en USD: %.2f%n&quot;, usd);
+} else if (opcion ==2) {
+System.out.print(&quot;Ingresa la cantidad en USD:&quot;);
+double usd = scanner.nextDouble();
+double clp = usd * tasaDolar;
+System.out.printf(&quot;Equivalente en CLP: %.2f%n&quot;, clp);
+} else {
+System.out.println(&quot;Opcion invalida.&quot;);
+}
+scanner.close();
+}
